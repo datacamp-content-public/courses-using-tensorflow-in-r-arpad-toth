@@ -117,18 +117,14 @@ As you see we define the number of epochs as 10.
 ```yaml
 type: "FullSlide"
 key: "2887d96199"
-code_zoom: 80
+code_zoom: 100
 ```
 
 `@part1`
 We can evaluate the model’s accuracy using the ```evaluate()``` function, using our ‘test’ data set for validation.
 
 ```r
-model %>% evaluate(input_fn(test, 
-                            features = c("disp", "cyl"), 
-                            response = "mpg",
-                            batch_size = 32,
-                            num_epochs = 10))
+model %>% evaluate(mtcars_input_fn(test))
 ```
 
 ```out
@@ -140,7 +136,7 @@ model %>% evaluate(input_fn(test,
 
 
 `@script`
-
+We can evaluate our model accuracy using the evaluate() function. Please note, that "test" data is provided as the first argument.
 
 
 ---
