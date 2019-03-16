@@ -138,7 +138,7 @@ model %>% evaluate(mtcars_input_fn(test))
 
 
 `@script`
-We can evaluate our model accuracy using the evaluate() function. Please note, that "test" data is provided as the first argument.
+In the next step, we evaluate our model accuracy using the evaluate() function. Please note, that we provide test dataset as the argument of the input function.
 
 
 ---
