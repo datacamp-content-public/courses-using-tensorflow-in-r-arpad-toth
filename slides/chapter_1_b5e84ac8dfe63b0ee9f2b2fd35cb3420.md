@@ -53,8 +53,8 @@ key: "80a9a62274"
 
 `@part1`
 Create a training and a validation data set
-- Training is used to train
-- While validation is a separated data only for evaluate the performance
+- Training data is used to train
+- Validation is used to evaluate the performance
 
 
 `@part2`
@@ -67,7 +67,7 @@ test  <- mtcars[-indices, ]
 
 
 `@script`
-To train the data, first, we need to split our dataset. There are a ton of ways to produce train and validation set. Probably, you are already familiar with data partitioning. Here, we chose one of the simplest solutions where we pick up 80% of data to train and hold 20% for validation.
+To train the data, first, we need to split our dataset. There are a ton of ways to produce train and validation set. Probably, you are already familiar with data partitioning. The model is trained on the training dataset. The fitted model is used to predict the responses for the observations in a second dataset called the validation dataset. Here, we chose one of the simplest solutions where we pick up 80% of the data to train and hold 20% for validation.
 
 
 ---
