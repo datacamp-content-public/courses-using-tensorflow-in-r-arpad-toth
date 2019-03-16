@@ -52,8 +52,9 @@ code_zoom: 100
 ```
 
 `@part1`
-```
-indices <- sample(1:nrow(mtcars), size = 0.80 * nrow(mtcars))
+```r
+indices <- sample(1:nrow(mtcars), 
+                  size = 0.80 * nrow(mtcars))
 train <- mtcars[indices, ]
 test  <- mtcars[-indices, ]
 ```
