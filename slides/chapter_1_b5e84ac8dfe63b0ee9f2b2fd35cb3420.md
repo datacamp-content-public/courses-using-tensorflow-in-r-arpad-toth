@@ -25,14 +25,13 @@ Hi There! This is a test script
 
 ```yaml
 type: "FullSlide"
-key: "2d5d490d2d"
+key: "b031f40ed3"
 ```
 
 `@part1`
-1. Create an input function
-2. Define a linear model
-3. Train and evaluate
-4. Predict
+1. Create an input function{{1}}
+2. Define a linear model{{1}}
+3. Train and evaluate{{2}}
 
 
 `@script`
@@ -54,7 +53,12 @@ Create a training and a validation data set
 
 
 `@part2`
-
+```r
+indices <- sample(1:nrow(mtcars), 
+                  size = 0.80 * nrow(mtcars))
+train <- mtcars[indices, ]
+test  <- mtcars[-indices, ]
+```
 
 
 `@script`
@@ -92,7 +96,11 @@ key: "202c351b8f"
 ```
 
 `@part1`
+We’re now ready to train our model, using the ```train()``` function.
 
+```r
+model %>% train(mtcars_input_fn(train, num_epochs = 10))
+```
 
 
 `@script`
@@ -125,6 +133,25 @@ key: "c71f7602b9"
 
 `@part1`
 
+
+
+`@script`
+
+
+
+---
+## Our workflow
+
+```yaml
+type: "FullSlide"
+key: "fbb3eaa54c"
+```
+
+`@part1`
+1. Create an input function{{1}}
+2. Define a linear model{{1}}
+3. Train and evaluate{{1}}
+4. Predict{{2}}
 
 
 `@script`
