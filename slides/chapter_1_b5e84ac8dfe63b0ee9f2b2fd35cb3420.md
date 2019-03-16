@@ -67,7 +67,7 @@ test  <- mtcars[-indices, ]
 
 
 `@script`
-
+To train the data, first, we need to split our dataset. There are
 
 
 ---
