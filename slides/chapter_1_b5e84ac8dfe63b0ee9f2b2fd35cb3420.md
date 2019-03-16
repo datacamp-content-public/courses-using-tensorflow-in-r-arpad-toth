@@ -108,9 +108,7 @@ model %>% train(mtcars_input_fn(train,
 `@script`
 Now it's time to call the train function. In the previous section we built an input function called mtcars_input_fn. Now it's time to use it! As you see at the bottom code segment, we specify our input function with 2 parameters. The first, is the data with is the training dataset. The second is the number of epochs. 
 
-We complete 1 epoch when the model has iterated through all the batches once. In practice, we extend the epoch to more than 1.
-
-One epoch is when our setup has seen all the observations in our dataset once. But one epoch is almost always never enough for the loss to converge. In practice, this number is manually tuned.
+We complete 1 epoch when the model has iterated through all the batches once. In practice, we extend the epoch to more than 1. But one epoch is almost always never enough for the loss to converge. In practice, this number is manually tuned.
 
 As you see we define the number of epochs as 10.
 
