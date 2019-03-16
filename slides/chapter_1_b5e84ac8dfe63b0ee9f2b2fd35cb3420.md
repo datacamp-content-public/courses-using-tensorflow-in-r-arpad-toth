@@ -36,7 +36,7 @@ key: "b031f40ed3"
 
 
 `@script`
-In the previous section we created our input function, defined the feature columns and our linear regressor model. Now we are at the right position to train and evaluate our model. 
+In the previous section we created our input function, defined the feature columns and our linear regressor. Now we are at the right position to train and evaluate our model. 
 
 Moreover, as a last step we will predict miles per gallon for the first 3 rows.
 
@@ -67,7 +67,11 @@ test  <- mtcars[-indices, ]
 
 
 `@script`
-To train the data, first, we need to split our dataset. There are a ton of ways to produce train and validation set. Probably, you are already familiar with data partitioning. The model is trained on the training dataset. The fitted model is used to predict the responses for the observations in a second dataset called the validation dataset. Here, we chose one of the simplest solutions where we pick up 80% of the data to train and hold 20% for validation.
+To train the data, first, we need to split our dataset. There are a ton of ways to produce train and validation set. 
+
+Probably, you are already familiar with data partitioning. The model is trained on the training dataset. The fitted model is used to predict the responses in a second dataset called the validation dataset.
+
+Here, we chose one of the simplest solutions where we pick up 80% of the data to train and hold 20% for validation.
 
 
 ---
