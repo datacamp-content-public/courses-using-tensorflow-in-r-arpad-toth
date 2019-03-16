@@ -81,6 +81,26 @@ key: "202c351b8f"
 `@part1`
 We’re now ready to train our model, using the ```train()``` function.
 
+```r
+model %>% train(input_fn(train, 
+                         features = c("disp", "cyl"), 
+                         response = "mpg",
+                         batch_size = 32,
+                         num_epochs = 10))
+```
+
+
+`@script`
+Now it's time to call the train function. In the previous section we built an input function called mtcars_input_fn. Now it's time to use it! As you see at the bottom code segment, we specify our input function with 2 parameters. The first, is the data with is the training dataset. The second is the number of epochs. 
+
+We complete 1 epoch when the model has iterated through all the batches once. In practice, we extend the epoch to more than 1.
+
+One epoch is when our setup has seen all the observations in our dataset once. But one epoch is almost always never enough for the loss to converge. In practice, this number is manually tuned.
+
+As you see we define the number of epochs as 10.
+
+
+
 
 ```r
 mtcars_input_fn <- function(data, num_epochs = 1) {
@@ -102,16 +122,6 @@ model %>% train(mtcars_input_fn(train,
 ```{{3}}
 
 
-`@script`
-Now it's time to call the train function. In the previous section we built an input function called mtcars_input_fn. Now it's time to use it! As you see at the bottom code segment, we specify our input function with 2 parameters. The first, is the data with is the training dataset. The second is the number of epochs. 
-
-We complete 1 epoch when the model has iterated through all the batches once. In practice, we extend the epoch to more than 1.
-
-One epoch is when our setup has seen all the observations in our dataset once. But one epoch is almost always never enough for the loss to converge. In practice, this number is manually tuned.
-
-As you see we define the number of epochs as 10.
-
-
 ---
 ## Evaluation
 
@@ -125,7 +135,11 @@ code_zoom: 80
 We can evaluate the model’s accuracy using the ```evaluate()``` function, using our ‘test’ data set for validation.
 
 ```r
-model %>% evaluate(mtcars_input_fn(test))
+model %>% evaluate(input_fn(test, 
+                            features = c("disp", "cyl"), 
+                            response = "mpg",
+                            batch_size = 32,
+                            num_epochs = 10))
 ```
 
 ```out
