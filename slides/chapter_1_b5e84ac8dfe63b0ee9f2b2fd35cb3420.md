@@ -21,6 +21,25 @@ Hi There! This is a test script
 
 
 ---
+## Our workflow
+
+```yaml
+type: "FullSlide"
+key: "2d5d490d2d"
+```
+
+`@part1`
+1. Create an input function
+2. Define a linear model
+3. Train and evaluate
+4. Predict
+
+
+`@script`
+
+
+
+---
 ## Split the data
 
 ```yaml
