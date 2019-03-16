@@ -21,6 +21,97 @@ Hi There! This is a test script
 
 
 ---
+## Split the data
+
+```yaml
+type: "TwoRows"
+key: "80a9a62274"
+```
+
+`@part1`
+Create a training and a validation data set
+- Training is used to train
+- While validation is a separated data only for evaluate the performance
+
+
+`@part2`
+
+
+
+`@script`
+
+
+
+---
+## Split the data
+
+```yaml
+type: "FullSlide"
+key: "dcacfc0549"
+code_zoom: 100
+```
+
+`@part1`
+```
+indices <- sample(1:nrow(mtcars), size = 0.80 * nrow(mtcars))
+train <- mtcars[indices, ]
+test  <- mtcars[-indices, ]
+```
+
+
+`@script`
+
+
+
+---
+## Train the model
+
+```yaml
+type: "FullSlide"
+key: "202c351b8f"
+```
+
+`@part1`
+
+
+
+`@script`
+
+
+
+---
+## Evaluation
+
+```yaml
+type: "FullSlide"
+key: "2887d96199"
+```
+
+`@part1`
+
+
+
+`@script`
+
+
+
+---
+## Prediction
+
+```yaml
+type: "FullSlide"
+key: "c71f7602b9"
+```
+
+`@part1`
+
+
+
+`@script`
+
+
+
+---
 ## Let's practice!
 
 ```yaml
