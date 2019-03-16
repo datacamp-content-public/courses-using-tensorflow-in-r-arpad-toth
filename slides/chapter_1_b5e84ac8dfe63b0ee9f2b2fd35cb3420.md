@@ -66,28 +66,6 @@ test  <- mtcars[-indices, ]
 
 
 ---
-## Split the data
-
-```yaml
-type: "FullSlide"
-key: "dcacfc0549"
-code_zoom: 100
-```
-
-`@part1`
-```r
-indices <- sample(1:nrow(mtcars), 
-                  size = 0.80 * nrow(mtcars))
-train <- mtcars[indices, ]
-test  <- mtcars[-indices, ]
-```
-
-
-`@script`
-
-
-
----
 ## Train the model
 
 ```yaml
@@ -101,6 +79,10 @@ We’re now ready to train our model, using the ```train()``` function.
 ```r
 model %>% train(mtcars_input_fn(train, num_epochs = 10))
 ```
+
+```out
+[/] Training -- loss: 3743.89, step: 8
+```{{2}}
 
 
 `@script`
@@ -133,25 +115,6 @@ key: "c71f7602b9"
 
 `@part1`
 
-
-
-`@script`
-
-
-
----
-## Our workflow
-
-```yaml
-type: "FullSlide"
-key: "fbb3eaa54c"
-```
-
-`@part1`
-1. Create an input function{{1}}
-2. Define a linear model{{1}}
-3. Train and evaluate{{1}}
-4. Predict{{2}}
 
 
 `@script`
