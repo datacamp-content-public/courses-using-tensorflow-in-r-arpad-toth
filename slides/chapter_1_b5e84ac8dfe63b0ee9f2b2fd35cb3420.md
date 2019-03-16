@@ -32,6 +32,7 @@ key: "b031f40ed3"
 1. Create an input function{{1}}
 2. Define a linear model{{1}}
 3. Train and evaluate{{2}}
+4. Predict{{2}}
 
 
 `@script`
@@ -76,8 +77,10 @@ key: "202c351b8f"
 `@part1`
 We’re now ready to train our model, using the ```train()``` function.
 
+
 ```r
-model %>% train(mtcars_input_fn(train, num_epochs = 10))
+model %>% train(mtcars_input_fn(train, 
+                                num_epochs = 10))
 ```
 
 ```out
@@ -95,10 +98,22 @@ model %>% train(mtcars_input_fn(train, num_epochs = 10))
 ```yaml
 type: "FullSlide"
 key: "2887d96199"
+code_zoom: 80
 ```
 
 `@part1`
+We can evaluate the model’s accuracy using the ```evaluate()``` function, using our ‘test’ data set for validation.
 
+```r
+model %>% evaluate(mtcars_input_fn(test))
+```
+
+```out
+[-] Evaluating -- loss: 1491.39, step: 1# A tibble: 1 x 5
+  `label/mean` average_loss global_step `prediction/mean`  loss
+         <dbl>        <dbl>       <dbl>             <dbl> <dbl>
+1         22.5         213.          50              10.2 1491.
+```{{2}}
 
 
 `@script`
@@ -114,7 +129,21 @@ key: "c71f7602b9"
 ```
 
 `@part1`
+After we’ve finished training our model, we can use it to generate predictions from new data.
 
+```r
+obs <- mtcars[1:3, ]
+model %>% predict(mtcars_input_fn(obs))
+```
+
+```out
+# A tibble: 3 x 1
+  predictions
+  <list>     
+1 <10.8>     
+2 <10.8>     
+3 <7.58>   
+```{{2}}
 
 
 `@script`
