@@ -67,7 +67,7 @@ test  <- mtcars[-indices, ]
 
 
 `@script`
-To train the data, first, we need to split our dataset. There are
+To train the data, first, we need to split our dataset. There are a ton of ways to produce train and validation set. Probably, you are already familiar with data partitioning. Here, we chose one of the simplest solutions where we pick up 80% of data to trains and hold 20% for validation.
 
 
 ---
