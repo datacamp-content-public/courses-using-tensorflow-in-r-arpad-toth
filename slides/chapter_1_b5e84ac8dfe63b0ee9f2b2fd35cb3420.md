@@ -31,7 +31,7 @@ key: "b031f40ed3"
 `@part1`
 1. Create an input function{{1}}
 2. Define a linear model{{1}}
-3. Train and evaluate{{2}}
+3. **Train and evaluate**{{2}}
 4. Predict{{2}}
 
 
