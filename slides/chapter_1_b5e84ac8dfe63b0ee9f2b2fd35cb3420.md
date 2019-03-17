@@ -55,8 +55,8 @@ key: "80a9a62274"
 Create a training and a validation data set. Training data is used to train while validation is used to evaluate the performance.
 
 - mtcars has 32 rows
-	- train dataset has 25 rows
-    - test dataset has 7 rows
+	- train dataset has 25 rows (80%)
+    - test dataset has 7 rows (20%)
 
 
 `@part2`
@@ -77,7 +77,7 @@ Here, we chose one of the simplest solutions where we pick up 80% of the data to
 
 
 ---
-## Train the model
+## Recap input function
 
 ```yaml
 type: "FullSlide"
@@ -85,7 +85,7 @@ key: "202c351b8f"
 ```
 
 `@part1`
-We’re now ready to train our model, using the ```train()``` function.
+Take a look to our input function and batch_size.
 
 ```r
 mtcars_input_fn <- function(data, num_epochs = 1) {
@@ -96,15 +96,6 @@ mtcars_input_fn <- function(data, num_epochs = 1) {
            num_epochs = num_epochs)
 }
 ```
-
-```r
-model %>% train(mtcars_input_fn(train, 
-                                num_epochs = 10))
-```{{2}}
-
-```out
-[/] Training -- loss: 3743.89, step: 8
-```{{3}}
 
 
 `@script`
@@ -124,6 +115,8 @@ key: "1b7289f318"
 ```
 
 `@part1`
+We’re now ready to train our model by using the `train()` function.
+
 ```r
 model %>% train(mtcars_input_fn(train, 
                                 num_epochs = 10))
@@ -144,7 +137,7 @@ model %>% train(mtcars_input_fn(train,
 ```yaml
 type: "FullSlide"
 key: "2887d96199"
-code_zoom: 100
+code_zoom: 80
 ```
 
 `@part1`
@@ -155,10 +148,10 @@ model %>% evaluate(mtcars_input_fn(test))
 ```
 
 ```out
-[-] Evaluating -- loss: 1491.39, step: 1# A tibble: 1 x 5
+[\] Evaluating -- loss: 169.74, step: 2# A tibble: 1 x 5
   `label/mean` average_loss global_step `prediction/mean`  loss
          <dbl>        <dbl>       <dbl>             <dbl> <dbl>
-1         22.5         213.          50              10.2 1491.
+1         19.8         29.4          50              18.6  103.
 ```{{2}}
 
 
@@ -188,9 +181,9 @@ model %>% predict(mtcars_input_fn(obs))
 # A tibble: 3 x 1
   predictions
   <list>     
-1 <10.8>     
-2 <10.8>     
-3 <7.58>   
+1 <18.5>     
+2 <19.1>     
+3 <20.2>  
 ```{{2}}
 
 
