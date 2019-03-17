@@ -176,6 +176,29 @@ Now it's your turn to practice what you learned!
 
 
 ---
+## Train the mode
+
+```yaml
+type: "FullSlide"
+key: "efac346f44"
+```
+
+`@part1`
+```r
+model %>% train(mtcars_input_fn(train, 
+                                num_epochs = 10))
+```
+
+```out
+[/] Training -- loss: 3743.89, step: 8
+```
+
+
+`@script`
+
+
+
+---
 ## Let's practice!
 
 ```yaml
