@@ -52,9 +52,11 @@ key: "80a9a62274"
 ```
 
 `@part1`
-Create a training and a validation data set
-- Training data is used to train
-- Validation is used to evaluate the performance
+Create a training and a validation data set. Training data is used to train while validation is used to evaluate the performance.
+
+- mtcars has 32 rows
+	- train dataset has 25 rows
+    - test dataset has 7 rows
 
 
 `@part2`
@@ -111,6 +113,29 @@ Now it's time to call the train function. In the previous section we built an in
 We complete 1 epoch when the model has iterated through all the batches once. In practice, we extend the epoch to more than 1. But one epoch is almost always never enough for the loss to converge. In practice, this number is manually tuned.
 
 As you see we define the number of epochs as 10.
+
+
+---
+## Train the model
+
+```yaml
+type: "FullSlide"
+key: "1b7289f318"
+```
+
+`@part1`
+```r
+model %>% train(mtcars_input_fn(train, 
+                                num_epochs = 10))
+```
+
+```out
+[\] Training -- loss: 200.85, step: 50
+```
+
+
+`@script`
+
 
 
 ---
@@ -173,29 +198,6 @@ model %>% predict(mtcars_input_fn(obs))
 Finally, let's predict miles per gallon consumption for the first 3 rows in the dataset. The predict function estimate the target values by the linear model we defined. As you see here are the mpg values in the sample output.
 
 Now it's your turn to practice what you learned!
-
-
----
-## Train the mode
-
-```yaml
-type: "FullSlide"
-key: "efac346f44"
-```
-
-`@part1`
-```r
-model %>% train(mtcars_input_fn(train, 
-                                num_epochs = 10))
-```
-
-```out
-[/] Training -- loss: 3743.89, step: 8
-```
-
-
-`@script`
-
 
 
 ---
