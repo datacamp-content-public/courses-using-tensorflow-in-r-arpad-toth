@@ -75,7 +75,7 @@ Probably, you are already familiar with data partitioning. The model is trained 
 
 Here, we chose one of the simplest solutions where we pick up 80% of the data to train and hold 20% for validation.
 
-The mtcars dataset has 32 rows, so we create a train dataset with 25 rows (which is 80%) and a validation dataset with 7 rows (which the 20% of the original data).
+The mtcars dataset has 32 rows, so we create a training dataset with 25 rows (which is 80%) and a validation dataset with 7 rows (which the 20% of the original data).
 
 
 ---
