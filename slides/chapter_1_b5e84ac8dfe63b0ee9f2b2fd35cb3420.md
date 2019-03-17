@@ -3,7 +3,7 @@ title: Insert title here
 key: b5e84ac8dfe63b0ee9f2b2fd35cb3420
 
 ---
-## Launch graph and fit the line
+## Training and evaluation
 
 ```yaml
 type: "TitleSlide"
@@ -17,7 +17,7 @@ title: Instructor at DataCamp
 
 
 `@script`
-Hi There! This is a test script
+
 
 
 ---
@@ -69,11 +69,13 @@ test  <- mtcars[-indices, ]
 
 
 `@script`
-To train the data, first, we need to split our dataset. There are a ton of ways to produce train and validation set. 
+To train the data, first, we need to split our dataset. There are a ton of ways to produce train and validation dataset. 
 
 Probably, you are already familiar with data partitioning. The model is trained on the training dataset. The fitted model is used to predict the responses in a second dataset called the validation dataset.
 
 Here, we chose one of the simplest solutions where we pick up 80% of the data to train and hold 20% for validation.
+
+The mtcars dataset has 32 rows, so we create a train dataset with 25 rows (which is 80%) and a validation dataset with 7 rows (which the 20% of the original data).
 
 
 ---

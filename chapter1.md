@@ -4,7 +4,7 @@ description: 'Chapter description goes here.'
 free_preview: true
 ---
 
-## Launch graph and fit the line
+## Training and evaluation
 
 ```yaml
 type: VideoExercise
