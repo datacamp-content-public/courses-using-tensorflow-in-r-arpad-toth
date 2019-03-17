@@ -88,9 +88,9 @@ We’re now ready to train our model, using the ```train()``` function.
 ```r
 mtcars_input_fn <- function(data, num_epochs = 1) {
   input_fn(data, 
-           features = c("disp", "cyl"), 
+           features = c("wt", "qsec", "am"),
            response = "mpg",
-           batch_size = 32,
+           batch_size = 5,
            num_epochs = num_epochs)
 }
 ```
