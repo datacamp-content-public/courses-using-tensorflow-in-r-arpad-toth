@@ -101,13 +101,9 @@ mtcars_input_fn <- function(data, num_epochs = 1) {
 
 
 `@script`
-Before we call the train function, let's recap the input function we built in the previous section. As you see, we define the batch size as 5. This is because we do not feed all of our data to our model at once. However, mtcars is a small dataset, we follow a real-life cases where we input small chunks to the train function. Actually, this input function will be used for evaluation and prediction too. We defined to avoid code duplication.
+Before we call the train function, let's recap the input function we built in the previous section. As you see, we define the batch size as 5. This is because we do not feed all of our data to our model at once. However, mtcars is a small dataset, we follow a real-life cases where we input small chunks to the train function. If we have 25 rows in training data, 5 batches means we cover all of that training set in 5 steps. Since 5 times 5 is 25.
 
- Now it's time to use it! As you see at the bottom code segment, we specify our input function with 2 parameters. The first, is the data with is the training dataset. The second is the number of epochs. 
-
-We complete 1 epoch when the model has iterated through all the batches once. In practice, we extend the epoch to more than 1. But one epoch is almost always never enough for the loss to converge. In practice, this number is manually tuned.
-
-As you see we define the number of epochs as 10.
+Actually, this input function will be used for evaluation and prediction too. That's why, we defined to avoid code duplication.
 
 
 ---
