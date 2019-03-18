@@ -139,17 +139,17 @@ model %>% evaluate(mtcars_input_fn(test))
 
 
 `@script`
-In the next step, we evaluate our model performance using the evaluate() function. Please note, that we provide test dataset as the argument of the input function.
+In the next step, we evaluate our model performance. Please note that we provide a test dataset as the argument of the input function.
 
-If we execute this command, we got information about our model performance in the test dataset. The first row returns the sum of losses and the number of steps. We have only 7 rows in test dataset, so 2 steps are enough to evaluate since the batch size is 5. It means that the first batch includes 5 rows while the second only 2 rows.
+If we execute this command, we get information about our model performance in the test dataset. The first row returns the sum of losses and the number of steps. We have only 7 rows in the test dataset, so 2 steps are enough to evaluate since the batch size is 5. It means that the first batch includes 5 rows, while the second only has 2 rows.
 
-The tibble what we see returns some metrics about the training status. 
+The tibble that we see returns some metrics about the training status. 
 
-While training and evaluation is often an iterative process the global_step is counter which indicates how many times we optimize the loss after process a batch. Since we call train function only once, global_step is 50 now.
+While training and evaluation is often an iterative process, the global_step is counter, which indicates how many times we optimize the loss after process a batch. Since we call train function only once, global_step is 50 now.
 
-Label/mean equals the mean of the mpg values in the training dataset. While prediction/mean is the mean of the predicted mpg values. We can compare them and see that our predictions are slightly lower than the real ones. 
+"Label/mean" equals the mean of the mpg values in the training dataset, while "prediction/mean" is the mean of the predicted mpg values. We can compare them and see that our predictions are slightly lower than the real ones.
 
-The average_loss is the mean of the batch losses while the loss is the sum of the batch losses.
+The "average_loss" is the mean of the batch losses, while the loss is the sum of the batch losses.
 
 
 ---
