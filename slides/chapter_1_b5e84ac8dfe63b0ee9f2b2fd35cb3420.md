@@ -17,7 +17,9 @@ title: Instructor at DataCamp
 
 
 `@script`
+In the previous section, we created our input function, and defined the feature columns and our linear regressor. Now we are in the right position to train and evaluate our model. 
 
+To train the model, we need a training and a validation dataset.
 
 
 ---
