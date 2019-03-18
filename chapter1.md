@@ -1,6 +1,6 @@
 ---
-title: 'Chapter Title Here'
-description: 'Chapter description goes here.'
+title: 'TensorFlow Estimators'
+description: 'This is a pilot exercise. '
 free_preview: true
 ---
 
