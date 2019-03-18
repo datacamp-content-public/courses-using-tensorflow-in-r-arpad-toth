@@ -23,27 +23,6 @@ To train the model, we need a training and a validation dataset.
 
 
 ---
-## Our workflow
-
-```yaml
-type: "FullSlide"
-key: "b031f40ed3"
-```
-
-`@part1`
-1. Create an input function{{1}}
-2. Define a linear model{{1}}
-3. **Train and evaluate**{{2}}
-4. Predict{{2}}
-
-
-`@script`
-In the previous section, we created our input function, and defined the feature columns and our linear regressor. Now we are in the right position to train and evaluate our model. 
-
-To train the model, we need a training and a validation dataset.
-
-
----
 ## Split the data
 
 ```yaml
@@ -69,13 +48,9 @@ test  <- mtcars[-indices, ]
 
 
 `@script`
-To train the data, first, we need to split our dataset. There are a ton of ways to produce train and validation dataset. 
+You are probably already familiar with data partitioning. Here, we chose one of the most straightforward solutions, where we pick up 80% of the data to train and hold 20% for validation.
 
-Probably, you are already familiar with data partitioning. The model is trained on the training dataset. The fitted model is used to predict the responses in a second dataset called the validation dataset.
-
-Here, we chose one of the simplest solutions where we pick up 80% of the data to train and hold 20% for validation.
-
-The mtcars dataset has 32 rows, so we create a training dataset with 25 rows (which is 80%) and a validation dataset with 7 rows (which the 20% of the original data).
+The mtcars dataset has 32 rows, so we create a training dataset with 25 rows (which is 80%) and a validation dataset with 7 rows (which is 20% of the original data).
 
 
 ---
