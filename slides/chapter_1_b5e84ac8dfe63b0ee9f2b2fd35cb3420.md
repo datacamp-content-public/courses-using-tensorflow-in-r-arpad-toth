@@ -179,7 +179,7 @@ model %>% predict(mtcars_input_fn(obs))
 
 
 `@script`
-Finally, let's predict miles per gallon values for the first 3 rows in the dataset. The predict function estimates the target values by the linear regressor we defined. As you see, here are the predicted mpg values in case of the first 3 rows in our original dataset.
+Finally, let's predict the miles per gallon values for the first 3 rows in the dataset. As you can see, here are the predicted mpg values in the case of the first rows.
 
 Now it's your turn to practice what you learned!
 
