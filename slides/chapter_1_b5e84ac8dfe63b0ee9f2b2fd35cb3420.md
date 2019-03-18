@@ -105,13 +105,13 @@ model %>% train(mtcars_input_fn(train,
 
 
 `@script`
-Now it's time to call the train function! As you see, we specify our input function with 2 parameters. The first is the data which is the training dataset. The second is the number of epochs. 
+Now it's time to call the train function! As you can see, we specify our input function with 2 parameters. The first is the data, which is the training dataset. The second is the number of epochs. 
 
-An epoch consists of going through all your training samples once. And one step refers to training over a single batch. In practice, we extend the epoch to more than 1 because one epoch is almost always never enough for minimizing loss. In practice, this number is manually tuned.
+An epoch consists of going through all your training samples once, and one step refers to the training of a single batch. In practice, we set the epoch to more than 1 because one epoch is almost always never enough for minimizing loss. Thus, this number is manually tuned in practice.
 
-As you see, we define the number of epochs as 10. Since 1 epoch contains 5 steps or, 10 epochs mean 50 steps.
+As you can see, we define the number of epochs as 10. Since 1 epoch contains 5 steps (or batches), 10 epochs mean 50 steps.
 
-The loss here is the sum of the batch losses. In the case of linear regressor the loss is defined as a mean-squared error.
+The total loss here is the sum of the batch losses. In the case of "linear regressor" the loss is defined as a mean-squared error.
 
 
 ---
