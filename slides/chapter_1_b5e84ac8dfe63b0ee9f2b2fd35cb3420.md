@@ -99,6 +99,8 @@ mtcars_input_fn <- function(data, num_epochs = 1) {
 }
 ```
 
+![](https://assets.datacamp.com/production/repositories/4762/datasets/b11c50699e027313b6f5740d94a37677c7b529ee/TrainingAndBatches.png)
+
 
 `@script`
 Before we call the train function, let's recap the input function we built in the previous section. As you see, we define the batch size as 5. This is because we do not feed all of our data to our model at once. However, mtcars is a small dataset, we follow real-life cases where we input small chunks to the train function. If we have 25 rows in training data, 5 batches mean we cover all of that data points in 5 steps. Since 5 times 5 is 25.
@@ -124,7 +126,9 @@ model %>% train(mtcars_input_fn(train,
 
 ```out
 [\] Training -- loss: 200.85, step: 50
-```
+```{{2}}
+
+![](https://assets.datacamp.com/production/repositories/4762/datasets/1a26cc3f44685322eec417062cc7647769a1f4a5/10Epochs.png){{2}}
 
 
 `@script`
@@ -132,7 +136,7 @@ Now it's time to call the train function! As you see, we specify our input funct
 
 An epoch consists of going through all your training samples once. And one step refers to training over a single batch. In practice, we extend the epoch to more than 1 because one epoch is almost always never enough for minimizing loss. In practice, this number is manually tuned.
 
-As you see, we define the number of epochs as 10. Since 1 epoch contains 5 steps, 10 epochs mean 50 steps.
+As you see, we define the number of epochs as 10. Since 1 epoch contains 5 steps or, 10 epochs mean 50 steps.
 
 The loss here is the sum of the batch losses. In the case of linear regressor the loss is defined as a mean-squared error.
 
