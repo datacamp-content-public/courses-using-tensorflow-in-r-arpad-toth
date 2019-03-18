@@ -36,11 +36,9 @@ key: "b031f40ed3"
 
 
 `@script`
-In the previous section, we created our input function, defined the feature columns and our linear regressor. Now we are in the right position to train and evaluate our model. 
+In the previous section, we created our input function, and defined the feature columns and our linear regressor. Now we are in the right position to train and evaluate our model. 
 
-Moreover, as the last step we will predict miles per gallon values for the first 3 rows.
-
-Ok, let's move on.
+To train the model, we need a training and a validation dataset.
 
 
 ---
